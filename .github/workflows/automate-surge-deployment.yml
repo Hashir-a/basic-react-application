@@ -7,8 +7,7 @@ name: CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,16 +27,11 @@ jobs:
         node-version: 12
 
     # Install Yarn
-    - name: Yarn cache clean
-      run: yarn cache clean
-    # comment
-    - uses: borales/actions-yarn@v2.0.0
-      with:  
-        cmd: install #will run yarn install command
+  
         
     # Build react app with yarn:
     - name: Build React Aapp
-      run: yarn build
+      run: npm run build
       
     # install surge
     - name: Install surge
