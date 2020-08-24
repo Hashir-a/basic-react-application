@@ -31,7 +31,7 @@ jobs:
     - name: Yarn cache clean
       run: yarn cache clean
     # comment
-    - uses: borales/actions-yarn@v1.22.4
+    - uses: borales/actions-yarn@v2.0.0
       with:  
         cmd: install #will run yarn install command
         
